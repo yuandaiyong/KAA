@@ -1,0 +1,39 @@
+//
+//  PrefixHeader.pch
+//  TianFuQXiPhone
+//
+//  Created by Clover on 2017/11/13.
+//  Copyright © 2017年 Clover. All rights reserved.
+//
+
+#ifndef PrefixHeader_h
+#define PrefixHeader_h
+#import "AppDelegate.h"
+#import "MJExtension.h"
+
+//主程序delegate
+#define ShareAppDelegate            ((AppDelegate*)[UIApplication sharedApplication].delegate)
+
+#define SCREEN_WIDTH                [[UIScreen mainScreen] bounds].size.width
+
+#define SCREEN_HEIGHT               [[UIScreen mainScreen] bounds].size.height
+
+#define ISIPHONEX                   [[UIScreen mainScreen] bounds].size.height == 812.
+
+#define IS_IPAD             (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define IS_IPHONE           (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define IS_RETINA           ([[UIScreen mainScreen] scale] >= 2.0)
+
+
+#define TITLE_HEIGHT                       ((ISIPHONEX)?80:64)
+#define TAB_HEIGHT                         50
+
+
+#undef    RGB
+#define RGB(R,G,B)        [UIColor colorWithRed:R/255.0f green:G/255.0f blue:B/255.0f alpha:1.0f]
+#undef    RGBA
+
+
+#define RGBA(R,G,B,A)    [UIColor colorWithRed:R/255.0f green:G/255.0f blue:B/255.0f alpha:A]
+
+#endif /* PrefixHeader_h */
